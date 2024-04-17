@@ -19,7 +19,7 @@ int main(){
     if(st.count(5)){cout << "Hay un cinco \n";}//preg si hay un 5 en el conjunto
 
     //todas las preguntas de arriva son de orden O(log n)   
-
+    
 
     for(ll i:st){           //recorro todo el conjunto O(n)
     cout << i;
