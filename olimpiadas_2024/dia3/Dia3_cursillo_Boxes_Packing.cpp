@@ -15,7 +15,7 @@ int main(){
         REGALO
         ll n;
         cin>>n;
-        map<ll,ll> aux;
+        map<pair<string,string>,ll> aux;
         ll x;
  
 
@@ -26,7 +26,7 @@ int main(){
         aux[x]=aux[x]+1;   
         }
         else{
-        aux[x]=1;
+        aux[x]++;
         }      
         }
 

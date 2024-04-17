@@ -20,6 +20,7 @@
         "set": "cpp",
         "*.tcc": "cpp",
         "ostream": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "map": "cpp"
     }
 }
