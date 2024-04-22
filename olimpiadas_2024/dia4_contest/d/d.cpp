@@ -12,7 +12,7 @@ typedef long long ll;
 
 
 int main(){
-
+    REGALO
     ll n;
     cin>>n;
     string x,y;
