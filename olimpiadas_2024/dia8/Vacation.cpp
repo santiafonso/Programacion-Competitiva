@@ -10,39 +10,32 @@
 using namespace std;
 typedef long long ll;
 
-
-
-ll f(ll x){
-ll i=0,j=0,h=0;
-
-fore(i,0,n){
-    if()
-
-}
-}
-
-
-
-
 int main(){
-ll n;
+  ll n,ai,bi,ci;
+  cin>>n;
+  vector<ll> a;
+  vector<ll> b;
+  vector<ll> c;
+  ll dp[n][3];
 
-vector<ll> a;
-vector<ll> b;
-vector<ll> c;
-vector<ll> aux(n,0);
-ll a1,b1,c1;
+  fore(i,0,n){
 
-aux[n-1]=0;
+    cin>>ai>>bi>>ci;
+    a.push_back(ai);
+    b.push_back(bi);
+    c.push_back(ci);
 
-fore(i,0,n){
-    cin>>a1>>b1>>c1;
-    a.push_back(a1);
-    b.push_back(b1);
-    c.push_back(c1);
-}
+  }
 
+  dp[0][0]=a[0];
+  dp[0][1]=b[0];
+  dp[0][2]=c[0];
 
+  fore(i,1,n){
 
-cout<<f(a,b,c,aux);
+    dp[i][0]=a[i]+max(dp[i-1][2],dp[i-1][1]);
+    dp[i][1]=b[i]+max(dp[i-1][0],dp[i-1][2]);
+    dp[i][2]=c[i]+max(dp[i-1][1],dp[i-1][0]);
+  }
+  cout<<max(dp[n-1][0],max(dp[n-1][1],dp[n-1][2]));
 }

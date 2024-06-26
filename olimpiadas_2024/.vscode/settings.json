@@ -2,6 +2,24 @@
     "files.associations": {
         "iostream": "cpp",
         "random": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "cmath": "cpp",
+        "array": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "bitset": "cpp",
+        "utility": "cpp"
     }
 }

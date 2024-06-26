@@ -6,32 +6,26 @@
 #define snd second 
 #define all(x) x.begin(),x.end() 
 #define REGALO ios::sync_with_stdio(0);cin.tie(0);cout.tie(0); 
-
+#define SZ(x) ((ll) (x.size()))
 using namespace std;
 typedef long long ll;
 
 int main(){
+    ll n,m,a,b;
+    cin>>n>>m;
+    vector<vector<ll>> g(n);
+    fore(i,0,m){
 
-ll n,aux;
-cin>>n;
-vector<ll> v;
-vector<ll> c(n,0);
+        cin>>a>>b;
+        a--;
+        b--;
+        g[a].push_back(b);
+        g[b].push_back(a);
 
-fore(i,0,n){
-   cin>>aux;
-   v.push_back(aux); 
-}
-
-
-c[n-1]=0;
-
-ll res=LLONG_MAX;
-fore(i,0,n){
-
-    fore(j,i+1,min(100,)){
-        res=min(c[j]+abs(v[n-i]-c[j]),res);
     }
-
-}
-
+    ll res=0;
+    fore(i,0,n){
+        res=g[i].size()+res;
+    }
+    cout<<res;
 }

@@ -21,6 +21,14 @@
         "*.tcc": "cpp",
         "ostream": "cpp",
         "random": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "barrier": "cpp",
+        "chrono": "cpp",
+        "latch": "cpp",
+        "limits": "cpp",
+        "semaphore": "cpp",
+        "type_traits": "cpp",
+        "iosfwd": "cpp",
+        "algorithm": "cpp"
     }
 }
