@@ -1,0 +1,67 @@
+#include <bits/stdc++.h>
+#define FIN ios::sync_with_stdio(0);cin.tie(0);cout.tie(0)
+#define pb push_back
+#define fore(a,b,c) for(int a=b; a<c; ++a)
+#define dfore(a,b,c) for(int a=b; a>=c; --a)
+#define SZ(a) ((int)a.size())
+#define fst first
+#define snd second
+#define show(a) cout<<a<<"\n"
+#define showAll(a) for(auto i:a) cout<<i<<" ";cout<<"\n"
+#define input(a) for(auto& i:a) cin>>i
+#define all(a) a.begin(),a.end()
+#define DGB(a) cout<<#a<<" = "<<a<<"\n"
+#define RAYA cout<<"=============="<<"\n"
+#define pii pair<int,int>
+#define pll pair<ll,ll>
+#define MAXN 200005
+#define ALPH 26
+#define M 1000000007
+#define MAXINT (1<<30)
+#define MAXll (1ll<<60)
+#define PI 3.141592653
+#define ALL(s) s.begin(),s.end()
+#define INF (1LL<<62)
+using namespace std;
+typedef long long ll;
+typedef unsigned int ui;
+typedef unsigned long long ull;
+ 
+
+int main(){
+    FIN;
+    string s;
+    cin >> s;
+    vector<ll> v(26, 0);
+    fore(i, 0, s.size()) {
+        int aux = s[i] - 'A';
+        v[aux]++;
+    }
+    
+    ll impar=0,index=-1;
+    fore(i,0,SZ(v)){
+        if(v[i]%2==1){
+            impar++;
+            index=i;
+        }
+    }
+
+    if(impar>1){
+        cout<<"NO SOLUTION";
+    }
+    else{
+        string left = "", mid = "";
+
+        fore(i, 0, 26) {
+            string temp(v[i] / 2, 'A' + i);
+            left += temp;
+            if (v[i] % 2 == 1) {
+                mid += string(1, 'A' + i);
+            }
+        }
+    
+        string right = left;
+        reverse(all(right));
+        cout << left + mid + right << "\n";
+    }
+}
