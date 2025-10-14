@@ -26,11 +26,29 @@ using namespace std;
 typedef long long ll;
 typedef unsigned int ui;
 typedef unsigned long long ull;
-
-//for i in {a..z};do cp template.cpp $i.cpp;done
-
-
-int main(){
+ 
+int main() {
     FIN;
+    int n, q;
+    cin >> n >> q;
 
+    vector<int> precio(n + 1);
+
+    fore(i, 1, n + 1) {
+        cin >> precio[i];
+    }
+
+    ll total = 0;
+    fore(i, 0, q) {
+        int t, v, x;
+        cin >> t >> v >> x;
+        if (t == 1) {
+            total += 1LL * precio[v] * x;
+        } else if (t == 2) {
+            precio[v] = x;
+        }
+    }
+
+    cout << total << "\n";
+    return 0;
 }

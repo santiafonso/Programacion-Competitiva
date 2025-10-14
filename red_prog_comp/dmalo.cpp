@@ -20,17 +20,38 @@
 #define MAXINT (1<<30)
 #define MAXll (1ll<<60)
 #define PI 3.141592653
-#define ALL(s) s.begin(),s.end()
-#define INF (1LL<<62)
 using namespace std;
 typedef long long ll;
 typedef unsigned int ui;
 typedef unsigned long long ull;
 
-//for i in {a..z};do cp template.cpp $i.cpp;done
-
+//El Vasito is love, El Vasito is life
 
 int main(){
     FIN;
-
+    int nn;
+    cin>>nn;
+    //p = e − w
+    //r = n − s
+    //y = n + e + s + w
+    fore(i,0,nn){
+        double p,r,y,n,s,e,w,ew,ns;
+        cin>>p>>r>>y;
+        w=0;s=0;e=0;n=0;
+        w = y/4.0000;
+        s = w;
+        e = w;
+        n = w;
+        e += p/2.00;
+        w -= p/2.00;
+        n += r/2.00;
+        s -= r/2.00;
+        //aca se cumple todo
+  
+        cout<<setprecision(8)<<fixed<<n<<" "<<e<<" "<<s<<" "<<w<<'\n';
+        //DGB(e-w);DGB(n-s);DGB(n+e+s+w);RAYA;
+    }
+    return 0;
 }
+
+//Sobrevivimos al pabellon

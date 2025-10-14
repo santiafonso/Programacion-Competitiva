@@ -26,11 +26,28 @@ using namespace std;
 typedef long long ll;
 typedef unsigned int ui;
 typedef unsigned long long ull;
-
-//for i in {a..z};do cp template.cpp $i.cpp;done
-
+ 
 
 int main(){
     FIN;
+    string s;cin>>s;
+
+    ll size=0;
+
+    sort(s.begin(),s.end());
+    while(1){
+        size++;
+        if(!next_permutation(s.begin(),s.end())){
+            break;
+        }
+    }
+    cout<<size<<'\n';
+    sort(s.begin(),s.end());
+    fore(i,0,size){
+        show(s);
+        if(!next_permutation(s.begin(),s.end())){
+            break;
+        }
+    }
 
 }

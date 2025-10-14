@@ -29,8 +29,38 @@ typedef unsigned long long ull;
 
 //for i in {a..z};do cp template.cpp $i.cpp;done
 
+bool solve(vector<ll> bolsas,ll C,ll T,ll t){
+    ll lim = T*t,grupo=1,suma=0; // lim = max cantidad de pochoclos que puede comer cada competidor
+    
+    fore(i,0,SZ(bolsas)){
+        if(bolsas[i]>lim) return false;
+        if(suma+bolsas[i]>lim){
+            grupo++;
+            suma=0;
+        }
+        suma+=bolsas[i];
+    }
+    return grupo<=C;
+}
 
 int main(){
     FIN;
+    ll N,C,T;
+    cin>>N>>C>>T;
+    vector <ll> bolsas(N);
+    fore(i,0,N)cin>>bolsas[i];
+    
+    ll l=0,r=1e15,res=r;
 
+    while(l<=r){
+        ll m = (l+r)/2;
+        if(solve(bolsas,C,T,m)){
+            res=m;
+            r=m-1;
+        }
+        else{
+            l=m+1;
+        }
+    }
+    cout<<res<<'\n';
 }
