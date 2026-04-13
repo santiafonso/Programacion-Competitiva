@@ -1,27 +1,24 @@
-// C++ program to generate bit patterns from 0 to 2^N-1
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<string> graycode(int n) {
-    vector<string> result;
-    
-    // Do for all binary numbers
-    for(int i = 0; i < (1 << n); i++) {
-        int gray = i ^ (i >> 1);
-        string code = "";
-        for(int j = n-1; j >= 0; j--) {
-            code += (gray & (1 << j)) ? '1' : '0';
-        }
-        result.push_back(code);
-    }
-    return result;
-}
-
 int main() {
-    int n = 2;
-    vector<string> res = graycode(n);
-    for(string code : res) {
-        cout << code << endl;
+    int n;
+    cin >> n;
+
+    int total = 1 << n;
+
+    // recorrer por cantidad de unos
+    for (int k = 0; k <= n; k++) {
+        for (int mask = 0; mask < total; mask++) {
+            if (__builtin_popcount(mask) == k) {
+                // imprimir en formato binario de n bits
+                for (int i = n - 1; i >= 0; i--) {
+                    cout << ((mask >> i) & 1);
+                }
+                cout << '\n';
+            }
+        }
     }
+
     return 0;
 }
