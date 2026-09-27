@@ -1,25 +1,25 @@
-# Programación Competitiva
+# Competitive Programming
 
-Soluciones a problemas y contests de programación competitiva, en C++.
+Solutions to competitive programming problems and contests, in C++.
 
-## Estructura
+## Structure
 
-| Carpeta | Contenido |
+| Folder | Contents |
 |---|---|
-| `cses/` | Problemas del [CSES Problem Set](https://cses.fi/problemset/) |
-| `Contests/` | Rondas de Codeforces, torneos y contests del cursillo |
-| `simu/` | Simulacros de ICPC (regionales Brasil, SWERC) |
-| `simu_equipo/` | Simulacros de 2025 con mi equipo: TAP, regionales LatAm, USP Try-Outs, Gran Premio de México, SWERC |
-| `TC2025/` | Contests del Training Camp Argentina 2025 |
-| `curso_2024/` | Ejercicios del curso de programación competitiva 2024, por día |
-| `red_prog_comp/` | Problemas de la Red de Programación Competitiva |
+| `cses/` | Problems from the [CSES Problem Set](https://cses.fi/problemset/) |
+| `Contests/` | Codeforces rounds, tournaments and training course contests |
+| `simu/` | ICPC mock contests (Brazil regionals, SWERC) |
+| `simu_equipo/` | 2025 mock contests with my team: TAP, LatAm regionals, USP Try-Outs, Mexican Grand Prix, SWERC |
+| `TC2025/` | Contests from Training Camp Argentina 2025 |
+| `curso_2024/` | Exercises from the 2024 competitive programming course, by day |
+| `red_prog_comp/` | Problems from the Red de Programación Competitiva |
 
-`simu_equipo/` y `TC2025/` vienen de [jmmochko/prog_comp](https://github.com/jmmochko/prog_comp), el repo de mi equipo; incluyen soluciones de mis compañeros.
+`simu_equipo/` and `TC2025/` come from [jmmochko/prog_comp](https://github.com/jmmochko/prog_comp), my team's repo; they include solutions by my teammates.
 
-`template.cpp` es la plantilla base que uso para cada problema.
+`template.cpp` is the base template I use for every problem.
 
-## Compilar
+## Build
 
 ```bash
-g++ -std=c++17 -O2 -o sol problema.cpp && ./sol < input.txt
+g++ -std=c++17 -O2 -o sol problem.cpp && ./sol < input.txt
 ```
