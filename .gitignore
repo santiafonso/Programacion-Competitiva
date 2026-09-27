@@ -1,0 +1,8 @@
+# Binarios compilados
+a.out
+*.out
+*.o
+*.exe
+
+# Editor
+.vscode/
